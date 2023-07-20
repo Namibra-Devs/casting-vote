@@ -362,7 +362,7 @@ section {
     }
     .sidebar {
         position: relative;
-        min-height: 88.7vh;
+        min-height: 80.7vh;
         width: 250px;
         padding: 6px 14px;
         z-index: 9;
@@ -454,22 +454,24 @@ transition-delay: 1s;
 .dashboard-container {
     margin-top: 1rem;
 }
-.dashboard-container .voting-info-secton, .election-info-secton{
+.dashboard-container .voting-info-secton, .election-info-secton, .graph-representation{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .voting-info, .election-category {
 position: relative;
 width: 18rem;
-height: 10.5rem;
+height: 9.5rem;
 padding: 1rem;
 border-radius: 5px;
 }
 .election-category {
-    display: grid;
+    display: flex;
     justify-content: center; 
     align-items: center;
+    gap: 1rem;
+
 }
 .election-category h1 {
     text-align: center;
@@ -605,6 +607,9 @@ margin-bottom: 1rem;
 .candidate .candidates-info p {
    text-align: center;
 }
+.candidate-img img {
+    width: 6rem;
+}
 .election-section {
     display: grid;
     gap: 1rem;
@@ -640,6 +645,85 @@ background-color: #046382;
 }
 .election-text button a {
     color: #FFF;
+}
+
+.voting-description  {
+    margin-top: 1.5rem;
+    width: 50vw;
+}
+.voting-description * {
+    margin-bottom: .53rem;
+    font-size: 1.2rem;
+}
+.voting-description .btn {
+width: 10rem;
+margin: 0 auto;
+}
+.voting-description .btn button {
+    width: 100%;
+padding: 0.4rem;
+background-color: #046382;
+border: none;
+}
+.voting-description .btn button a {
+   color: #FFF;
+}
+/*================= register & login form=================== */
+.form-details {
+    background-color: rgb(224, 221, 221);
+    margin: 1rem 0;
+    /* height: 65vh;  */
+    width: 30vw;
+    min-width: 20rem;
+    padding: 2rem;
+}
+.form-details form, .form-details form .btns {
+    display: grid;
+    gap: 1rem;
+}
+.form-details form .form-info {
+    display: grid;
+}
+.form-details input, .form-details .btns button, .submit-btn button {
+    padding: .5rem;
+    margin-top: 0.3rem;
+}
+.form-details label {
+    font-size: 1.2rem;
+}
+.form-details .or {
+    position: relative;
+}
+.form-details .or::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 12vw;
+    min-width: 7rem;
+    top: 50%;
+}
+.form-details .or::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 12vw;
+    min-width: 7rem;
+    top: 50%;
+    right: 0;
+}
+.form-details .btns button a {
+    padding-right: 10px;
+}
+.submit-btn button {
+    width: 26vw;
+    min-width: 16rem;
+    background-color: #046382;
+    color: #FFF;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
 }
 
  @media (max-width:1000px) {
@@ -992,6 +1076,14 @@ background-color: #046382;
             .election-details img {
              width: 16rem;
             }  
+            .election-result {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+            .voting-description  {
+                width: 65vw;
+            }
+         
         }
     @media (max-width:400px) {
         .navbar-links { 
@@ -1055,6 +1147,10 @@ background-color: #046382;
                 width: 12rem;
                 right:.6rem;
             }
+            .form-details {
+                min-width: 19rem;
+            }
+           
      }
    
     @media (max-width:320px) {

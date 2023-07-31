@@ -8,6 +8,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="font-awesome-6/css/all.min.css">
 <link rel="stylesheet" href="./css/style.css">
+<style>
+    .total-votes {
+        display: none;
+    }
+</style>
 <title>Casting Right Vote</title>
 </head>
 <body>
@@ -31,7 +36,7 @@
              <a href="#" class="bell-icon">
                 <img src="images/bell.png" alt="">
              </a>
-             <a href="#" class="user-img">
+             <a href="userprofile.html" class="user-img">
                 <img src="images/Ellipse 2.png" alt="">
              </a>
             </div>
@@ -39,15 +44,15 @@
         
         </div>
     </nav>
-    <div class="dashboard">
+    <div class="dashboard voting-details">
     <div class="sidebar">
         <div class="sidebar_toggle">
             <i class="fa fa-bars"></i>
         </div>
         <ul class="sidebar-list">
           <li>
-            <a href="dashboard.html" class="active-sidebar-list">
-                <img src="images/home.png" alt="">
+            <a href="dashboard.html">
+                <img class="active-li" src="images/home.png" alt="">
                 <span class="link_name">Dashboard</span>
             </a>
          </li>
@@ -57,9 +62,9 @@
                 <span class="link_name">Category</span>
             </a>
          </li>
-         <li>
-            <a href="electionList.html">
-                <img src="images/manual-voting.png" alt="">
+         <li class="active-sidebar-list">
+            <a href="electionList.html" class="active-li">
+                <img class="active-li" src="images/manual-voting.png" alt="">
                 <span class="link_name">Voting Events</span>
             </a>
          </li>
@@ -70,7 +75,7 @@
             </a>
          </li>
           <li>
-            <a href="#">
+            <a href="userprofile.html">
                 <img src="images/Profile.png" alt="">
                 <span class="link_name">User</span>
             </a>
@@ -91,47 +96,114 @@
            <h3>candidates:</h3>
         </div>
         <div class="candidates">
-            <div class="candidate">
-                <img src="images/candidate-1.png" alt="">
-                <div class="candidates-info">
-                    <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+
+            <div class="candidate" id="candidate1">
+              <img src="images/candidate-1.png" alt="">
+               <div class="candidates-info">
+              <h4>Vote Abdul Hakeem(#554)</h4>
+              <button class="btn" onclick="openPopup(1)">Vote</button>
+               <div class="total-votes"> <span id="votes1">0 Votes</span> </div>
+             </div>
             </div>
-            <div class="candidate">
-                <img src="images/Candidate-2.png" alt="">
-                <div class="candidates-info">
-                    <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+          
+            <div class="candidate" id="candidate2">
+              <img src="images/Candidate-2.png" alt="">
+              <div class="candidates-info">
+                  <h4>Vote Yakin(#554)</h4>
+              <button class="btn" onclick="openPopup(2)">Vote</button>
+               <div class="total-votes"><span id="votes2">0</span> Votes</div>
+              </div>
             </div>
-            <div class="candidate">
-                <img src="images/candidate-3.png" alt="">
-                <div class="candidates-info">
-                     <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+          
+            <div class="candidate" id="candidate3">
+              <img src="images/candidate-3.png" alt="">
+               <div class="candidates-info">
+              <h4>Vote Mohammed(#554)</h4>
+              <button class="btn" onclick="openPopup(3)">Vote</button>
+              <div class="total-votes"><span id="votes3">0</span> Votes </div>
+              </div>
             </div>
-            <div class="candidate">
-                <img src="images/candidate-4.png" alt="">
-                <div class="candidates-info">
-                    <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+          
+            <div class="candidate" id="candidate4">
+              <img src="images/candidate-4.png" alt="">
+               <div class="candidates-info">
+              <h4>Vote John Fatoam(#554)</h4>
+              <button class="btn" onclick="openPopup(4)">Vote</button>
+              <div class="total-votes"><span id="votes4">0</span> Votes</div>
+              </div>
             </div>
-            <div class="candidate">
-                <img src="images/candidate-4.png" alt="">
-                <div class="candidates-info">
-                    <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+            <div class="candidate" id="candidate5">
+              <img src="images/candidate-4.png" alt="">
+               <div class="candidates-info">
+              <h4>Vote Habiba(#554)</h4>
+              <button class="btn" onclick="openPopup(5)">Vote</button>
+              <div class="total-votes"><span id="votes5">0</span> Votes</div>
+             </div>
             </div>
-            <div class="candidate">
-                <img src="images/candidate-4.png" alt="">
-                <div class="candidates-info">
-                    <a href="#"><h4>John Smith(#554)</h4></a>
-                </div>
+            <div class="candidate" id="candidate6">
+              <img src="images/candidate-4.png" alt="">
+               <div class="candidates-info">
+              <h4>Vote John Baaki(#554)</h4>
+              <button class="btn" onclick="openPopup(6)">Vote</button>
+              <div class="total-votes"><span id="votes6">0</span> Votes</div>
+              </div>
             </div>
-        </div>
+          
+            <div class="overlay-popup" id="overlay"></div>
+            <div class="popup" id="popup">
+              <div class="close-popup">
+                <i class="fa fa-times"></i>
+              </div>
+                <img src="images/votingpopup.png" alt="">
+                <div class="price-info">
+              <h3><span id="popupCandidate"></span></h3>
+              <p>Cost per vote: $0.50</p> 
+            </div>
+              <div class="btn-group">
+             [ <button onclick="decreaseVotes()">-</button>
+             <input style="width: 3rem; border-color:#046382;" id="popupVotes">
+              <button onclick="increaseVotes()">+</button> ]
+               </div>
+               <div class="total-price-info">
+              <p>Total Price: $<span id="popupTotalPrice">0</span></p>
+              <button onclick="closePopup()">Proceed to payment</button>
+            </div>
+            </div>
+            <div class="overlay-popup" id="overlay"></div>
+            
+            <div class="payment-form" id="payment-form">
+                <form id="paymentForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Mobile Money Nummber:</label>
+                        <input type="number" id="number" name="number" required>
+                    </div>
+                    
+          <button onclick="submitPayment()" class="payment-btn" type="submit">Submit Payment</button>
+                </form>
+            </div>
+
+            <div class="confirm" id="confirm"> 
+                <img src="images/confirm.png" alt="">
+                <div class="price-info">
+                    <h3> Submission Successful</h3>
+                    <p>Thank you for submitting your vote!</p> 
+                    <p>Your vote has been successfully recorded.</p>
+                  </div>
+            </div>
         
+
+          </div>
     </section>
 </div>
- 
+    <script src="js/voteupdate.js"></script>
     <script src="js/style.js"></script>
 </body>
 </html>

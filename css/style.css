@@ -14,7 +14,9 @@ a {
 section {
     margin: 3rem 0;
 }
-
+.navbar {
+    padding: 1rem;
+}
 .navbar, .footer-container {
     position: relative;
     padding: 1.2rem 0;
@@ -93,7 +95,7 @@ section {
 }
 .about-us {
     position: relative;
-    /* height: 100vh; */
+    height: 100.3vh;
 }
 .star-img img{
     position: absolute;
@@ -278,8 +280,8 @@ section {
         border-radius: 100%;
         line-height: .5rem;
     }
-    .social-icons i {
-        font-size: 0.8rem;
+    .social-icons img {
+        width:1rem;
     }
     .mission .title p {
         font-size: 1.3rem;
@@ -362,7 +364,7 @@ section {
     }
     .sidebar {
         position: relative;
-        min-height: 80.7vh;
+        min-height: 87.7vh;
         width: 250px;
         padding: 6px 14px;
         z-index: 9;
@@ -409,6 +411,9 @@ transition-delay: 1s;
     color: #000;
     z-index: 12;
 }
+.sidebar li a.active-li {
+    color: #fff;
+}
 .active-sidebar-list {
     background-color: #046382;
     border-radius: 5px;
@@ -418,6 +423,11 @@ transition-delay: 1s;
     white-space: nowrap;
     pointer-events: none;
     opacity: 1;
+}
+.sidebar li a img.active-li {
+    background-color: #fff;
+    padding: .5rem;
+    border-radius: 50%;
 }
 
 .sidebar li a::after {
@@ -457,12 +467,12 @@ transition-delay: 1s;
 .dashboard-container .voting-info-secton, .election-info-secton, .graph-representation{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 .voting-info, .election-category {
 position: relative;
-width: 18rem;
-height: 9.5rem;
+width: 17rem;
+height: 9.3rem;
 padding: 1rem;
 border-radius: 5px;
 }
@@ -503,7 +513,7 @@ border: 1px solid #046382;
  }
 
  .voting-number p {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     /* padding: 2rem 0; */
  }
 .voting-number span {
@@ -519,7 +529,7 @@ border: 1px solid #046382;
 .calender-events .events, .calender-events .calender {
     background-color: rgba(159, 211, 231, 0.74);
     border-radius: 5px;
-    padding: 1rem;
+    padding: .8rem;
     width: 30vw;
     min-width: 19rem;
 }
@@ -534,11 +544,14 @@ text-align: left;
 margin-bottom: 1rem;
 }
 .event-details {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.0rem;
 }
 .event-details p {
     color: rgb(54, 54, 54);
     margin-top: 0.4rem;
+}
+.event-info * {
+    margin-bottom: .5rem;
 }
 .events a {
    text-decoration: underline !important;
@@ -551,6 +564,17 @@ margin-bottom: 1rem;
     display: flex;
     gap: .5rem;
     margin-bottom: 1rem;
+    width: 66vw;
+}
+.dashboard-nav button {
+    border: none;
+    padding: .5rem .8rem;
+    background-color: #046382;
+    border-radius: 3px;
+}
+.dashboard-nav button a {
+    background-color: #046382;
+    color: #fff;
 }
 .dashboard-nav a {
     background-color: #ebebeb;
@@ -573,11 +597,11 @@ margin-bottom: 1rem;
    flex-wrap: wrap;
     /* justify-content: center; */
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 .candidate {
     position: relative;
-    height: 15rem;
+    height: 13rem;
     width: 18rem;
 }
 .candidate img {
@@ -585,12 +609,23 @@ margin-bottom: 1rem;
     height: 100%;
 }
 .candidate .candidates-info {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 1.5rem;
-    right:3.7rem;
+    right:2.7rem;
     background-color: rgba(133, 136, 143, 0.837);
     padding: .8rem;
     border-radius: 5px;
+    width: 13rem;
+}
+.candidate .candidates-info .btn {
+    background-color: #046382;
+    border: none;
+    margin-top: 3px;
+    padding: 3px;
+    color: aliceblue;
 }
 .candidate .soccer-info {
     position: absolute;  
@@ -600,6 +635,13 @@ margin-bottom: 1rem;
     width: 17rem;
     right:.6rem;
     border-radius: 5px;
+}
+.candidate .admi-info {
+    background-color: rgba(4, 99, 130, 0.616); 
+}
+.candidate .admi-info * {
+  margin-bottom: 3px;
+  color: rgb(235, 234, 234);
 }
 .soccer-info p {
     color: #eaebee;
@@ -659,7 +701,13 @@ background-color: #046382;
 width: 10rem;
 margin: 0 auto;
 }
-.voting-description .btn button {
+.voting-description .btn button, .proceed-btn button {
+    width: 100%;
+padding: 0.4rem;
+background-color: #046382;
+border: none;
+}
+ .proceed-btn button {
     width: 100%;
 padding: 0.4rem;
 background-color: #046382;
@@ -667,6 +715,65 @@ border: none;
 }
 .voting-description .btn button a {
    color: #FFF;
+}
+/*================= User Profile=================== */
+.profile-img-container {
+    position: relative;
+    background: url(../images/profile-bg.png);
+    background-repeat: no-repeat;
+    width: 65vw;
+    height: 20rem;
+}
+.profile-info {
+    display:flex;
+    flex-flow: column;
+    justify-content: end;
+    padding-top: 5px;
+}
+.profile-info * {
+    padding-top: 3px;
+}
+.profile-img {
+    display: flex;
+  position: absolute;
+  gap: .7rem;
+  bottom: -3rem;
+  left: 1rem;
+  /* align-items: center; */
+}
+.profile-img img {
+  width: 10rem;
+}
+.profile-details {
+    margin: 5rem 0;
+    height: 50vh;
+}
+.profile-details .payment-account {
+    width: 90vw;
+}
+.profile-details .payment-details {
+    width: 65vw;
+    display: flex;
+    justify-content:space-between;
+}
+.profile-details .payment-details p {
+   font-size: 1.2rem;
+   margin-top: .7rem;
+}
+.btn-container {
+    display:flex;
+    flex-flow: column;
+    justify-content: end;  
+}
+.btn-container .btn {
+    width: 100%;
+padding: 0.7rem;
+background-color: #046382;
+border: none;
+border-radius: 4px;
+}
+.btn-container a {
+    color: #FFF;
 }
 /*================= register & login form=================== */
 .form-details {
@@ -676,6 +783,33 @@ border: none;
     width: 30vw;
     min-width: 20rem;
     padding: 2rem;
+}
+.event-form {
+    width: 70vw;
+    height: 110vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+.event-form form {
+    width: 40vw;
+}
+.event-form form label {
+   margin-bottom: .3rem;
+}
+.event-form form .users-btn button{
+    width: 10rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #046382;
+    color: #FFF;
+    font-size: 1.1rem;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
 }
 .form-details form, .form-details form .btns {
     display: grid;
@@ -726,15 +860,161 @@ border: none;
     border: none;
 }
 
+/* =================popup================== */
+.popup, .confirm, .payment-form {
+    width: 20rem;
+    height: 18.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    border-radius: 5px;
+  }
+  /* .confirm .close-btn {
+    position:absolute; right: 1rem;top: 1rem;
+    cursor: pointer;
+  }
+  .confirm .close-btn .fa-times {
+    color: #046382;
+    font-size: 1.2rem;
+  } */
+  .popup img, .confirm img {
+    width: 4rem;
+  }
+  .popup *, .confirm * {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+  } 
+  .popup .btn-group button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+  }
+  .popup .total-price-info button {
+    border: none;
+    background-color: #046382;
+    font-size: 1rem;
+    color: aliceblue;
+    padding: .5rem 1rem;
+  }
+  .overlay-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+  .close-popup {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  } 
+  .close-popup .fa-times {
+   font-size: 1.2rem;
+   color: #046382;
+  } 
+  .popup button {
+    margin: 5px;
+    padding: 5px 10px;
+  }
+
+/* ===================payment form ============================= */
+
+.payment-form {
+    width: 600px;
+    height: 25rem;
+    margin: 0 auto;
+    background-color: #dddddd;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.payment-options label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.payment-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-btn:hover {
+    background-color: #45a049;
+}
+/*============================== setting ========================== */
+.setting {
+width: 65vw;
+}
+.setting .setting-title {
+    border-bottom: 0.1rem solid gray;
+}
+.setting-title h3 {
+    margin: 1rem 0;
+}
+.setting-details * {
+    margin-top: .6rem;
+}
+.setting-details p {
+    font-size: 1.1rem;
+}
+
+/*============================== media queries ========================== */
  @media (max-width:1000px) {
         .navbar-links {
             position: absolute;
-            top: 80%;
+            top: 100%;
             left: 0%;
             padding-top: 2rem;
             padding-left: 3.6rem;
             width: 100%;
-            height: 42vh;
+            height: 50vh;
             background-color:white;
            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.082);
             flex-direction: column;
@@ -801,6 +1081,9 @@ border: none;
         .dashboard-links form {
             width: 12rem;
         }
+        .dashboard-nav {
+            width: 60vw;
+        }
         .username h2 {
             font-size: 1.2rem;
         }
@@ -815,6 +1098,9 @@ border: none;
                 position: relative;
                 height: 15rem;
                 width: 17rem;
+            }
+            .candidate .candidates-info {
+                right:3.7rem;
             }
             .candidate .soccer-info {
                 padding: .8rem;
@@ -836,6 +1122,21 @@ border: none;
                 padding: .4rem;
                 bottom:-.5rem;
                 }
+
+                .payment-form {
+                    width: 500px;
+                }
+                .form-group input {
+                    width: 400px;
+                }
+                .profile-img-container {
+                    width: 70vw;
+                    margin-top: 1.4rem;
+                }
+                .profile-details .payment-details {
+                    width: 60vw;
+                }
+                
     }
     @media (max-width:768px) {
         .navbar-links { 
@@ -897,6 +1198,9 @@ border: none;
         .dashboard {
             column-gap: 3rem;
         }
+        .dashboard-nav {
+            width: 50vw;
+        }
         .dashboard-links {
             width: 65vw;
         }
@@ -941,9 +1245,23 @@ border: none;
             .election-text {
                 padding: .5rem;
             }
+            
+            .payment-form {
+                width: 400px;
+            }
+            .form-group input {
+                width: 300px;
+            }
+            .profile-img-container {
+                width: 70vw;
+                margin-top: 1.4rem;
+            }
+            .profile-details .payment-details {
+                width: 60vw;
+            }
            
      }
-    @media (max-width:600px) {
+ @media (max-width:600px) {
         
 .navbar {
     padding: .5rem 0;
@@ -1065,6 +1383,9 @@ border: none;
                 height: 15rem;
                 width: 15rem;
             }
+            .candidate .candidates-info {
+                right:2.4rem;
+            }
             .candidate .soccer-info {
                 padding: .8rem;
                 width: 14rem;
@@ -1083,8 +1404,65 @@ border: none;
             .voting-description  {
                 width: 65vw;
             }
+            .event-form {
+                width: 14rem;
+            }
+            .event-form form {
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                width: 12.5rem;
+            }
+            .event-form form .user-btn button {
+                width: 7rem;
+                font-size: .95rem;
+            }
+            .profile-img-container {
+                width: 70vw;
+                margin-top: 1.4rem;
+            }
+            .profile-info {
+                padding-top: 3px;
+            }
+            .profile-img {
+                flex-flow: wrap;
+              gap: .2rem;
+              bottom: -4rem;
+              /* align-items: center; */
+            }
+            .profile-img img {
+              width: 8rem;
+            }
+            .profile-details .payment-account {
+                width: 80vw;
+            }
+            .profile-details .payment-account h2{
+               font-size: 1rem;
+            }
+            .profile-details .payment-details {
+                width: 60vw;
+            }
+            .profile-details .payment-details p {
+               font-size: 1.0rem;
+               margin-top: .7rem;
+            }
+            .btn-container {
+                display:flex;
+                flex-flow: column;
+                justify-content: end;  
+            }
+            .btn-container .btn {
+                width: 100%;
+            padding: 0.4rem;
+            background-color: #046382;
+            border: none;
+            border-radius: 4px;
+            }
          
         }
+
+
+
     @media (max-width:400px) {
         .navbar-links { 
             padding-left: 1.8rem;
@@ -1150,6 +1528,22 @@ border: none;
             .form-details {
                 min-width: 19rem;
             }
+            .payment-form {
+                width: 300px;
+            }
+            .form-group input {
+                width: 300px;
+            }
+            .event-form {
+                width: 12.5rem;
+            }
+            .event-form form {
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                width: 12.5rem;
+            }
+          
            
      }
    
@@ -1225,6 +1619,20 @@ border: none;
             .election-details img {
              width: 13rem;
             }  
+            .event-form {
+                width: 10.5rem;
+                display: grid;
+                justify-content: start;
+            }
+            .event-form form {
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                width: 10.5rem;
+            }
+            .event-form form .user-btn button {
+                width: 5rem;
+            }
      }
    
    

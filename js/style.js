@@ -74,35 +74,4 @@ const btn= question.querySelector(".question-btn");
 
 
  
-     // Load Charts and the corechart and barchart packages.
-     google.charts.load('current', {'packages':['corechart']});
-
-     // Draw the pie chart and bar chart when Charts is loaded.
-     google.charts.setOnLoadCallback(drawChart);
-
-     function drawChart() {
-
-       var data = new google.visualization.DataTable();
-       data.addColumn('string', 'Topping');
-       data.addColumn('number', 'Votes');
-       data.addRows([
-         ['Abdul Hakeem Abubakari', 520],
-         ['Zakaria Yakin', 33],
-         ['Mohammed Adam', 102],
-         ['Fatoam Sule', 411],
-         ['Habiba Abdul Malik', 13]
-       ]);
-
-       var piechart_options = {title:'Pie Chart: How Much Pizza I Ate Last Night',
-                      width:400,
-                      height:300};
-       var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
-       piechart.draw(data, piechart_options);
-
-       var barchart_options = {title:'Barchart: How Much Pizza I Ate Last Night',
-                      width:400,
-                      height:300,
-                      legend: 'none'};
-       var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
-       barchart.draw(data, barchart_options);
-     }
+  

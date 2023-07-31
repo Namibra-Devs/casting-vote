@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../font-awesome-6/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>Casting Right Vote</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/Cast-Right-Vote.png" alt=""></a>
+            </div>
+            <div class="dashboard-links">
+              <div class="username-container">
+                <div class="username" style="display: flex; gap: .3rem;">
+                    <h2>Setting</h2>
+                </div>
+              </div>
+              <div class="search">
+              <form action="">
+                <input type="text" placeholder="Search... ">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+             </form>
+             <a href="#" class="bell-icon">
+                <img src="../images/bell.png" alt="">
+             </a>
+             <a href="#" class="user-img">
+                <img src="../images/Ellipse 2.png" alt="">
+             </a>
+            </div>
+            </div>
+        
+        </div>
+    </nav>
+    <div class="dashboard">
+    <div class="sidebar">
+        <div class="sidebar_toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="sidebar-list">
+          <li>
+            <a href="../administratordashboard/admiDashboard.html">
+                <img src="../images/home.png" alt="">
+                <span class="link_name">Dashboard</span>
+            </a>
+         </li>
+          <li>
+            <a href="../administratordashboard/votingManagement.html">
+                <img src="../images/Tick Square.png" alt="">
+                <span class="link_name">Voting Management</span>
+            </a>
+         </li>
+         <li>
+            <a href="../administratordashboard/userlist.html">
+                <img src="../images/Profile.png" alt="">
+                <span class="link_name">User Management</span>
+            </a>
+         </li>
+          <li>
+            <a href="../administratordashboard/analytics.html">
+                <img src="../images/Chart.png" alt="">
+                <span class="link_name">Report and Analytics</span>
+            </a>
+         </li>
+          <li class="active-sidebar-list">
+            <a href="setting.html" class="active-li ">
+                <img class="active-li" src="../images/Setting.png" alt="">
+                <span class="link_name">Setting</span>
+            </a>
+         </li>
+         <div class="logout">
+            <a href="../login.html">
+                <img src="../images/Logout.png" alt="">
+                <span> Logout</span>
+            </a>
+        </div>
+        </ul>
+
+        
+    </div>
+    <section class="dashboard-container">
+    <div class="setting" >
+        <div class="setting-title">
+            <h3>General Setting</h3>
+        </div>
+        <div class="setting-details">
+            <p>Organisation Name</p>
+            <p>Logo Upload</p>
+            <p>Email Notification</p>
+            <p>Defaul Time Zone</p>
+        </div>
+    </div>
+    <div class="setting" >
+        <div class="setting-title">
+            <h3>Security Setting</h3>
+        </div>
+        <div class="setting-details">
+            <p>Password Policy</p>
+            <p>Two-factor Authenfication</p>
+        </div>
+    </div>
+    <div class="setting" >
+        <div class="setting-title">
+            <h3>User Permission</h3>
+        </div>
+        <div class="setting-details">
+            <p>Role Management</p>
+            <p>Access Control</p>
+            <p>User Activity Tracking</p>
+        </div>
+    </div>
+    </section>
+</div>
+ 
+    <script src="../js/style.js"></script>
+
+</body>
+</html>

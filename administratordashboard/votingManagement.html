@@ -6,21 +6,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="font-awesome-6/css/all.min.css">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="../font-awesome-6/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
 <title>Casting Right Vote</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-center">
             <div class="logo">
-                <a href="index.html"><img src="images/Cast-Right-Vote.png" alt=""></a>
+                <a href="../index.html"><img src="../images/Cast-Right-Vote.png" alt=""></a>
             </div>
             <div class="dashboard-links">
               <div class="username-container">
                 <div class="username" style="display: flex; gap: .3rem;">
-                    <img src="images/dashboard-arrow.png" alt="">
-                    <h2>Sport Election List</h2>
+                    <h3>Voting Event Management</h3>
                 </div>
               </div>
               <div class="search">
@@ -29,10 +28,10 @@
                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
              </form>
              <a href="#" class="bell-icon">
-                <img src="images/bell.png" alt="">
+                <img src="../images/bell.png" alt="">
              </a>
              <a href="#" class="user-img">
-                <img src="images/Ellipse 2.png" alt="">
+                <img src="../images/Ellipse 2.png" alt="">
              </a>
             </div>
             </div>
@@ -40,60 +39,59 @@
         </div>
     </nav>
     <div class="dashboard">
-        <div class="sidebar">
-            <div class="sidebar_toggle">
-                <i class="fa fa-bars"></i>
-            </div>
-            <ul class="sidebar-list">
-              <li>
-                <a href="dashboard.html">
-                    <img src="images/home.png" alt="">
-                    <span class="link_name">Dashboard</span>
-                </a>
-             </li>
-              <li>
-                <a href="electionCategory.html">
-                    <img src="images/Category.png" alt="">
-                    <span class="link_name">Category</span>
-                </a>
-             </li>
-              <li class="active-sidebar-list">
-                <a href="electionList.html" class="active-li">
-                    <img class="active-li" src="images/manual-voting.png" alt="">
-                    <span class="link_name">Voting Event</span>
-                </a>
-             </li>
-              <li>
-                <a href="result.html">
-                    <img src="images/Chart.png" alt="">
-                    <span class="link_name">Real Time Result</span>
-                </a>
-             </li>
-              <li>
-                <a href="userprofile.html">
-                    <img src="images/Profile.png" alt="">
-                    <span class="link_name">User</span>
-                </a>
-             </li>
-             <div class="logout">
-                <a href="login.html">
-                    <img src="images/Logout.png" alt="">
-                    <span> Logout</span>
-                </a>
-            </div>
-            </ul>
-    
-            
+    <div class="sidebar">
+        <div class="sidebar_toggle">
+            <i class="fa fa-bars"></i>
         </div>
+        <ul class="sidebar-list">
+          <li>
+            <a href="../administratordashboard/admiDashboard.html">
+                <img src="../images/home.png" alt="">
+                <span class="link_name">Dashboard</span>
+            </a>
+         </li>
+          <li class="active-sidebar-list">
+            <a href="../administratordashboard/votingManagement.html" class="active-li">
+                <img class="active-li" src="../images/Tick Square.png" alt="">
+                <span class="link_name">Voting Management</span>
+            </a>
+         </li>
+         <li>
+            <a href="../administratordashboard/userlist.html">
+                <img src="../images/Profile.png" alt="">
+                <span class="link_name">User Management</span>
+            </a>
+         </li>
+          <li>
+            <a href="../administratordashboard/analytics.html">
+                <img src="../images/Chart.png" alt="">
+                <span class="link_name">Report and Analytics</span>
+            </a>
+         </li>
+          <li>
+            <a href="setting.html">
+                <img src="../images/Setting.png" alt="">
+                <span class="link_name">Setting</span>
+            </a>
+         </li>
+         <div class="logout">
+            <a href="../login.html">
+                <img src="../images/Logout.png" alt="">
+                <span> Logout</span>
+            </a>
+        </div>
+        </ul>
+
+        
+    </div>
     <section class="dashboard-container">
-        <div class="dashboard-nav">
-            <a href="#" class="active-nav">All</a>
-            <a href="#">Ongoing Voting Events</a>
-            <a href="#">Upcoming Voting Events</a>
-        </div>
+        <div class="dashboard-nav" style="display: flex; justify-content: space-between; align-items: center;">
+            <h3>Events Lists</h3>
+            <button><a href="newEventForm.html">Create New Event</a></button>
+         </div>
         <div class="candidates">
             <div class="candidate">
-                <img src="images/soccer-1.png" alt="">
+                <img src="../images/soccer-1.png" alt="">
                 <div class="soccer-info">
                     <a href="#">
                         <p>Captain Election - soccer Team (#535)</p>
@@ -103,7 +101,7 @@
                 </div>
             </div>
             <div class="candidate">
-                <img src="images/soccer-2.png" alt="">
+                <img src="../images/soccer-2.png" alt="">
                 <div class="soccer-info">
                     <a href="#">
                         <p>Captain Election - soccer Team (#535)</p>
@@ -113,7 +111,7 @@
                 </div>
             </div>
             <div class="candidate">
-                <img src="images/soccer-1.png" alt="">
+                <img src="../images/soccer-1.png" alt="">
                 <div class="soccer-info">
                     <a href="#">
                         <p>Captain Election - soccer Team (#535)</p>
@@ -123,7 +121,7 @@
                 </div>
             </div>
             <div class="candidate">
-                <img src="images/soccer-3.png" alt="">
+                <img src="../images/soccer-3.png" alt="">
                     <div class="soccer-info">
                         <a href="#">
                             <p>Captain Election - soccer Team (#535)</p>
@@ -133,7 +131,7 @@
                     </div>
             </div>
             <div class="candidate">
-                <img src="images/soccer-2.png" alt="">
+                <img src="../images/soccer-2.png" alt="">
                 <div class="soccer-info">
                     <a href="#">
                         <p>Captain Election - soccer Team (#535)</p>
@@ -143,7 +141,7 @@
                 </div>
             </div>
             <div class="candidate">
-                <img src="images/soccer-1.png" alt="">
+                <img src="../images/soccer-1.png" alt="">
                 <div class="soccer-info">
                     <a href="#">
                         <p>Captain Election - soccer Team (#535)</p>
@@ -158,6 +156,6 @@
     </section>
 </div>
  
-    <script src="js/style.js"></script>
+    <script src="../js/style.js"></script>
 </body>
 </html>

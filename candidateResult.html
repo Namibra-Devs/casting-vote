@@ -65,14 +65,14 @@
                 <span class="link_name">Voting Events</span>
             </a>
          </li>
-          <li>
-            <a href="result.html" class="active-sidebar-list">
-                <img src="images/Chart.png" alt="">
+          <li class="active-sidebar-list">
+            <a href="result.html" class="active-li">
+                <img class="active-li" src="images/Chart.png" alt="">
                 <span class="link_name">Real Time Result</span>
             </a>
          </li>
           <li>
-            <a href="#">
+            <a href="userprofile.html">
                 <img src="images/Profile.png" alt="">
                 <span class="link_name">User</span>
             </a>
@@ -90,14 +90,14 @@
     <section class="dashboard-container election-result">
         <h1 style="margin-bottom: 1rem;">RESULTS:</h1>
         <div class="voting-info-secton">
-            <a href="#" class="voting-info election-category" style="background-color: rgba(228, 226, 226, 0.296);">
+            <a href="#" class="voting-info election-category" id="candidate1" style="background-color: rgba(228, 226, 226, 0.296);">
                  <div class="candidate-img">
                     <img src="images/candidate-1.png" alt="">
                  </div>
                 <div class="voting-category-text">
-                 <p>Abdul Hakeem</p>
-                 <h3>Votes: 520</h3>
-                 <h3>Percent: 44.3%</h3>
+                 <p>Abdul Hakeem</p> 
+                 <h3>Votes: <span id="votes1">0</span></h3>
+                 <h3> <span id="percentage1">0%</span></h3>
                 </div>
             </a>
   
@@ -107,8 +107,8 @@
                  </div>
                 <div class="voting-category-text">
                  <p>Yakin</p>
-                 <h3>Votes: 33</h3>
-                 <h3>Percent: 2.8%</h3>
+                 <h3>Votes: <span id="votes2">0</span></h3>
+                 <h3> <span id="percentage2">0%</span></h3>
                 </div>
             </a>
   
@@ -118,8 +118,8 @@
                  </div>
                 <div class="voting-category-text">
                  <p>Mohammed</p>
-                 <h3>Votes: 102</h3>
-                 <h3>Percent: 8.2%</h3>
+                 <h3>Votes: <span id="votes3">0</span></h3>
+                 <h3> <span id="percentage3">0%</span></h3>
                 </div>
             </a>
   
@@ -127,11 +127,11 @@
                 <div class="candidate-img">
                     <img src="images/candidate-2.png" alt="">
                  </div>
-                <div class="voting-category-text">
+                <d class="voting-category-text">
                  <p>Fatoam</p>
-                 <h3>Votes: 411</h3>
-                 <h3>Percent: 35%</h3>
-                </div>
+                 <h3>Votes: <span id="votes4">0</span></h3>
+                 <h3> <span id="percentage4">0%</span></h3>
+                </d>
             </a>
   
             <a href="#" class="voting-info election-category"  style="background-color: rgba(228, 226, 226, 0.296);">
@@ -140,8 +140,8 @@
                  </div>
                 <div class="voting-category-text">
                  <p>Habiba</p>
-                 <h3>Votes: 13</h3>
-                 <h3>Percent: 1.1%</h3>
+                 <h3>Votes: <span id="votes5">0</span></h3>
+                 <h3> <span id="percentage5">0%</span></h3>
                 </div>
             </a>
   
@@ -151,12 +151,16 @@
                  </div>
                 <div class="voting-category-text">
                  <p>Baaki</p>
-                 <h3>Votes: 94</h3>
-                 <h3>Percent: 8%</h3>
+                 <h3>Votes: <span id="votes6">0</span></h3>
+                 <h3> <span id="percentage6">0%</span></h3>
                 </div>
             </a>
+           
          </div>
-         <h1 style="margin-top: 1rem;">Total Votes:1000</h1>
+         <div style="margin-top: 1rem;">
+            <h3>Total Votes for All Candidates</h3>
+            <p>Total Votes: <span id="totalVotes">0</span></p>
+        </div>
        
         <div class="statistics" style="margin-top: 3rem;">
             <h2>STATISTICS</h2>
@@ -209,6 +213,7 @@
       
     }
   </script>
+    <script src="js/voteupdate.js"></script>
     <script src="js/style.js"></script>
 </body>
 </html>

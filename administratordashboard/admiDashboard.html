@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../font-awesome-6/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>Casting Right Vote</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Candidates", "Votes", { role: "style" } ],
+        ["Hakeem", 87, "brown"],
+        ["Yakeen", 10, "red"],
+        ["Mohammed", 167, "gold"],
+        ["Fatoam", 302, "color: #0D1282"],
+        ["Habeeba", 342, "color: #1D5D9B"],
+        ["Baaki", 21, "color: #1A5D1A"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Votes of Candiates",
+        width: 375,
+        height: 300,
+        bar: {groupWidth: "40%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/Cast-Right-Vote.png" alt=""></a>
+            </div>
+            <div class="dashboard-links">
+              <div class="username-container">
+                <div class="username" style="display: flex; gap: .3rem;">
+                    <h2>Hello Khadijah</h2>
+                    <img src="../images/waving-hand.png" alt="">
+                </div>
+                <p>Welcome back</p>
+              </div>
+              <div class="search">
+              <form action="">
+                <input type="text" placeholder="Search... ">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+             </form>
+             <a href="#" class="bell-icon">
+                <img src="../images/bell.png" alt="">
+             </a>
+             <a href="#" class="user-img">
+                <img src="../images/Ellipse 2.png" alt="">
+             </a>
+            </div>
+            </div>
+        
+        </div>
+    </nav>
+    <div class="dashboard">
+    <div class="sidebar">
+        <div class="sidebar_toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="sidebar-list">
+          <li class="active-sidebar-list">
+            <a href="../administratordashboard/admiDashboard.html" class="active-li">
+                <img class="active-li" src="../images/home.png" alt="">
+                <span class="link_name">Dashboard</span>
+            </a>
+         </li>
+          <li>
+            <a href="../administratordashboard/votingManagement.html">
+                <img src="../images/Tick Square.png" alt="">
+                <span class="link_name">Voting Management</span>
+            </a>
+         </li>
+         <li>
+            <a href="../administratordashboard/userlist.html">
+                <img src="../images/Profile.png" alt="">
+                <span class="link_name">User Management</span>
+            </a>
+         </li>
+          <li>
+            <a href="../administratordashboard/analytics.html">
+                <img src="../images/Chart.png" alt="">
+                <span class="link_name">Report and Analytics</span>
+            </a>
+         </li>
+          <li>
+            <a href="setting.html">
+                <img src="../images/Setting.png" alt="">
+                <span class="link_name">Setting</span>
+            </a>
+         </li>
+         <div class="logout">
+            <a href="../login.html">
+                <img src="../images/Logout.png" alt="">
+                <span> Logout</span>
+            </a>
+        </div>
+        </ul>
+
+        
+    </div>
+    <section class="dashboard-container">
+       <div class="voting-info-secton">
+          <a href="#" class="voting-info" style="background-color: #c98a4f3a; border: 2px solid violet;">
+            <div class="voting-img">
+            <img src="../images/8542529_user_check_icon 1.png" alt="">
+           </div>
+            <div class="voting-text">
+                <p>Registered Users</p>
+            </div>
+            <div class="voting-number">
+                <p>12</p>
+            </div>
+          </a>
+
+          <a href="#" class="voting-info" style="background-color: #dae0e23a; border: 2px solid violet;">
+            <div class="voting-img">
+            <img src="../images/Vector.png" alt="">
+           </div>
+            <div class="voting-text">
+                <p>Active Voting Events</p>
+            </div>
+            <div class="voting-number">
+                <p>12</p>
+            </div>
+          </a>
+
+          <a href="#" class="voting-info" style="background-color: #CDE0E6; border: 2px solid #046382;">
+            <div class="voting-img">
+            <img src="../images/icons.png" alt="">
+           </div>
+            <div class="voting-text">
+                <p>Total Events</p>
+            </div>
+            <div class="voting-number">
+                <p>12</p>
+            </div>
+          </a>
+       </div>
+       <div class="calender-events">
+        <div class="events" style="background-color: rgb(216, 216, 216);">
+            <div class="title">
+            <p style="text-align: center;">Analytics and Reports</p>
+           </div>
+           <div id="columnchart_values" style=" width: 370;margin-bottom: 1rem; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11); border-radius: 5px;"></div>
+            <a href="#">View All Events</a>
+        </div>
+        <div class="calender">
+
+        </div>
+
+       </div>
+        
+    </section>
+</div>
+ 
+    <script src="../js/style.js"></script>
+
+</body>
+</html>

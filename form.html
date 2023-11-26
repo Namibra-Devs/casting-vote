@@ -8,51 +8,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="font-awesome-6/css/all.min.css">
 <link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/templates/topnav.js" type="module" async></script>
+<script src="js/form-processes/register.js" type="module" async></script>
 <title>Casting Right Vote</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-center">
-            <div class="logo">
-                <a href="index.html"><img src="images/Cast-Right-Vote.png" alt=""></a>
-            </div>
-            <div class="navbar-links">
-                <a href="about.html">About us</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-            <div class="navbar-btns">
-                <a href="login.html">Log in</a>
-            </div>
-             <div class="toggle-menu">
-                <i class="fa fa-bars"></i>
-             </div>
-        </div>
+    <nav class="navbar" id="topnav"> 
     </nav>
    <section class="about-us">
     <div class="form-details">
         <h1 style="text-align: center;">Register</h1>
-        <form action=""> 
+        <form id="registration-form"> 
           <div class="form-info">
-            <label for="">Full Name</label>
-            <input type="text" name="" id="">
+            <label for="">First Name</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Enter your first name">
+          </div>
+          <div class="form-info">
+            <label for="">Last Name</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Enter your last name">
           </div>
           <div class="form-info">
             <label for="">Email</label>
-            <input type="email" name="" id="">
+            <input type="email" name="email" id="email" placeholder="Eg. info@namibra.com">
           </div>
           <div class="form-info">
             <label for="">Password</label>
-            <input type="password" name="" id="">
+            <input type="password" name="password" id="password" placeholder="Enter a password">
+          </div>
+          <div class="form-info">
+            <label for="">Confirm Password</label>
+            <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Enter your password again">
           </div>
           <div class="or">
             <p style="text-align: center;">or</p>
           </div>
           <div class="btns">
-          <button><a href="#">Continue with Google</a><i class="fab fa-google"></i></button>
-          <button><a href="#">Continue with Facebook</a><i class="fab fa-facebook-f"></i></button>
+          <button
+            type="button"
+          title="Google sign up"
+          ><span style="margin-right: 0.2rem;">Continue with Google</span><i class="fab fa-google"></i></button>
+          <button
+            type="button"
+          title="Facebook sign up"
+          ><span style="margin-right: 0.2rem;">Continue with Facebook</span><i class="fab fa-facebook-f"></i></button>
           </div>
           <div class="check-box">
-            <input type="checkbox" name="" id=""> <label for="">I agree with the terms and condition</label>
+            <input type="checkbox" name="terms_agreement" id="terms_agreement"> <label for="terms_agreement">I agree with the terms and condition</label>
           </div>
           <div class="submit-btn">
             <button type="submit">Register</button>

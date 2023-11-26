@@ -1,5 +1,5 @@
 import { registerUser } from "../utilities/backendApiCalls.js";
-import { redirectIfLoggedIn, redirectTo, saveToken } from "../utilities/browserFunctions.js";
+import { redirectIfLoggedIn, saveToken } from "../utilities/browserFunctions.js";
 
 const form = document.getElementById("registration-form");
 const formInputs = document.querySelectorAll("#registration-form input");
@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
 
 	if (error !== null) {
 		Swal.fire("Error!", error, "error");
-		// form.reset();
+		form.reset();
 		return;
 	}
 
@@ -31,7 +31,7 @@ form.addEventListener("submit", (e) => {
 			form.reset();
 
             // redirect to dashboard
-            redirectTo("dashboard.html");
+
 		})
 		.catch((error) => {
 			console.log(error);
@@ -39,8 +39,9 @@ form.addEventListener("submit", (e) => {
 				? error.response.data.message
 				: error.message;
 
+            console.log(errorMsg);
 			Swal.fire("Error!", errorMsg, "error");
-			// form.reset();
+			form.reset();
 		});
 });
 

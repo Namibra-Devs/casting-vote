@@ -7,3 +7,9 @@ export const registerUser = async (user) => {
     const response = await axios.post(url, user);
     return response.data;
 };
+
+export const loginUser = async (user) => {
+    const url = `${API_URL}/auth/login`;
+    const response = await axios.post(url, user);
+    return response.data;
+}

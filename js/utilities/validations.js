@@ -40,3 +40,38 @@ const charsRepeated = (password) => {
     });
     return repeated > 0;
 }
+
+
+export const validatePassword = (password) => {
+    const strength = passwordStrength(password);
+    if (strength < 3) {
+        throw new Error('Password is too weak');
+    }
+    return null;
+}
+
+export const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    if (!re.test(email)) {
+        throw new Error('Invalid email address');
+    }
+    return null;
+}
+
+export const validateRequiredFields = (formValues, requiredFields) => {
+    for (const field of requiredFields) {
+        if (formValues[field] === "") {
+            throw new Error(`${field} is required`);
+        }
+    }
+    return null;
+}
+
+export const validateForm = (formValues, requiredFields, options = {
+    validatePassword: true,
+    validateEmail: true
+}) => {
+    validateRequiredFields(formValues, requiredFields);
+    if (options.validateEmail) validateEmail(formValues.email);
+    if (options.validatePassword) validatePassword(formValues.password);
+}
